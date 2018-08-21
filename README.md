@@ -17,6 +17,5 @@ Usefull tutorials:
 
 -- Elasticsearch Tutorial: https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html
 -- SpringBoot Tutorail: https://spring.io/guides/gs/spring-boot/
--- 
 
 
