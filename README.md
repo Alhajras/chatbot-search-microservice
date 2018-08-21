@@ -6,6 +6,8 @@ Project guidelines:
 
 -- import the formatter file in you IDE so that we can reduce the merge conflicts resulting from different formats.
 
+	The formatter can be found in the develop branch: /develop/formatter.xml
+
 --Please don't use null, or at least reduce the usage of nulls as much as possible that way we can eliminate the most occuring Exception Class -NullPointerException-.
 	Here is an article on why you shouldn't use null in your project and how to avoid using it: https://github.com/google/guava/wiki/UsingAndAvoidingNullExplained
 
