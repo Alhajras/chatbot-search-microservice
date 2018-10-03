@@ -110,16 +110,15 @@ public class ArticleDao {
         searchSourceBuilder.query(QueryBuilders.matchQuery("data", searchWord));
         searchRequest.source(searchSourceBuilder);
 
-
-        SearchResponse sr = null;
         try {
-            sr = restHighLevelClient.search(searchRequest , RequestOptions.DEFAULT);
+            SearchResponse sr = restHighLevelClient.search(searchRequest , RequestOptions.DEFAULT);
+            for(SearchHit hit : sr.getHits()){
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        for(SearchHit hit : sr.getHits()){
-        }
+
 
 
     }
