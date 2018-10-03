@@ -103,7 +103,7 @@ public class ArticleDao {
         }
     }
 
-    public void searchArticlesByAString(String searchWord) {
+    public String searchArticlesByAString(String searchWord) {
 
         SearchRequest searchRequest = new SearchRequest();
         SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
@@ -112,14 +112,13 @@ public class ArticleDao {
 
         try {
             SearchResponse sr = restHighLevelClient.search(searchRequest , RequestOptions.DEFAULT);
-            for(SearchHit hit : sr.getHits()){
-            }
+
+            return sr.toString();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-
-
+        return "";
 
     }
 
