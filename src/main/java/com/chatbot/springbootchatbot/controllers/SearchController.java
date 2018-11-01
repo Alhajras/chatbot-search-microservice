@@ -6,26 +6,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class GeneralController {
-
+public class SearchController {
 
 
     private ArticleDao dao;
 
-    public GeneralController(ArticleDao dao) {
+    public SearchController(ArticleDao dao) {
         this.dao = dao;
-    }
-
-
-    @RequestMapping("/hello")
-    public String hello() {
-        return " Hello !!";
     }
 
     @RequestMapping("/search/{key}")
     public String search(@PathVariable String key){
         return dao.searchArticlesByAString(key);
     }
-
 
 }
